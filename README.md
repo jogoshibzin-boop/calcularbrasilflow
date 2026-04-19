@@ -63,11 +63,11 @@ pedagio-site/
 
 ### 1. ✅ CNPJ e Razão Social (JÁ PREENCHIDOS)
 Os seguintes dados já estão configurados em todas as páginas:
-- **Razão Social:** SYLUS IMOBILIARIA LTDA
+- **Razão Social:** Rni Incorporadora Imobiliaria 491 LTDA
 - **Nome Fantasia/Marca:** Calcular Flow Brasil
-- **CNPJ:** 17.644.769/0001-45
+- **CNPJ:** 43.787.520/0001-07
 
-Se precisar alterar futuramente, busque por `17.644.769/0001-45` ou `SYLUS IMOBILIARIA LTDA` em todos os arquivos .html.
+Se precisar alterar futuramente, busque por `43.787.520/0001-07` ou `Rni Incorporadora Imobiliaria 491 LTDA` em todos os arquivos .html.
 
 ### 2. Substituir e-mails
 Busque e substitua:
