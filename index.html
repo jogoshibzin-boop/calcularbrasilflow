@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calcular Flow Brasil - Calculadora Gratuita de Pedágios e Rotas</title>
+<meta name="description" content="Calcule gratuitamente o valor dos pedágios e o custo total da sua viagem pelas rodovias brasileiras. Serviço informativo com dados atualizados.">
+<meta name="keywords" content="calculadora de pedágio, valor de pedágio, rota com pedágio, custo de viagem, pedágios brasil">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Calcular Flow Brasil">
+<link rel="canonical" href="https://calcularflowbrasil.com.br/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calcular Flow Brasil - Calculadora Gratuita de Pedágios">
+<meta property="og:description" content="Calcule gratuitamente o valor dos pedágios e o custo da sua viagem.">
+<meta property="og:locale" content="pt_BR">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/styles.css">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Calcular Flow Brasil",
+  "url": "https://calcularflowbrasil.com.br/",
+  "description": "Calculadora gratuita de pedágios e rotas pelo Brasil",
+  "inLanguage": "pt-BR"
+}
+</script>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">
+                <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+                </svg>
+            </span>
+            Calcular Flow Brasil
+        </a>
+        <nav class="nav">
+            <a href="index.html" class="active">Início</a>
+            <a href="index.html#calculadora">Calculadora</a>
+            <a href="pages/sobre.html">Sobre</a>
+            <a href="pages/contato.html">Contato</a>
+        </nav>
+        <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+    </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+    <div class="container hero-inner">
+        <div>
+            <div class="hero-badge">
+                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
+                100% Gratuito • Sem cadastro
+            </div>
+            <h1>Planeje sua <span>viagem pelo Brasil</span> com o valor exato dos pedágios</h1>
+            <p class="hero-description">
+                Calcule de forma gratuita e rápida o custo total da sua rota, incluindo pedágios por categoria de veículo e combustível. Uma ferramenta informativa para motoristas que querem viajar com previsibilidade.
+            </p>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <a href="#calculadora" class="btn btn-primary btn-lg">
+                    Calcular Minha Rota
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
+                </a>
+                <a href="#como-funciona" class="btn btn-secondary btn-lg">Como funciona</a>
+            </div>
+            <div class="hero-trust">
+                <div class="hero-trust-item">
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    Dados públicos atualizados
+                </div>
+                <div class="hero-trust-item">
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    Todas as categorias de veículos
+                </div>
+                <div class="hero-trust-item">
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    Sem coleta de dados pessoais
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="assets/img/pedagio-hero.png" alt="Praça de pedágio em rodovia brasileira com cabines sinalizadas">
+            <div class="hero-image-badge">
+                <svg width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="var(--color-primary)" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                </svg>
+                <div>
+                    <strong>+ 2.500 praças</strong>
+                    <small>mapeadas no território nacional</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CALCULADORA ============ -->
+<section class="calculator-section" id="calculadora">
+    <div class="container">
+        <div class="calculator-card">
+            <div class="calculator-tabs">
+                <button class="tab-button active" type="button">
+                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 6px;">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+                    </svg>
+                    Calcular Rota
+                </button>
+            </div>
+
+            <form id="calc-form">
+                <div class="calc-grid">
+                    <div class="form-group">
+                        <label class="form-label" for="origem">Origem</label>
+                        <input type="text" id="origem" class="form-input" placeholder="Ex: São Paulo" list="cidades" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="destino">Destino</label>
+                        <input type="text" id="destino" class="form-input" placeholder="Ex: Rio de Janeiro" list="cidades" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                            Calcular
+                        </button>
+                    </div>
+                </div>
+
+                <datalist id="cidades">
+                    <option value="São Paulo">
+                    <option value="Rio de Janeiro">
+                    <option value="Belo Horizonte">
+                    <option value="Curitiba">
+                    <option value="Florianópolis">
+                    <option value="Porto Alegre">
+                    <option value="Brasília">
+                    <option value="Vitória">
+                </datalist>
+
+                <div style="margin-top: 24px;">
+                    <label class="form-label">Categoria do veículo</label>
+                    <div class="vehicle-select">
+                        <div class="vehicle-option selected" data-vehicle="carro">
+                            <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h8l2 5h1a1 1 0 011 1v3a1 1 0 01-1 1h-1m-10 0H6a1 1 0 01-1-1v-3a1 1 0 011-1h1l2-5zM7 17a1 1 0 100-2 1 1 0 000 2zm10 0a1 1 0 100-2 1 1 0 000 2z"/>
+                            </svg>
+                            <span>Carro</span>
+                            <small>2 eixos</small>
+                        </div>
+                        <div class="vehicle-option" data-vehicle="moto">
+                            <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 17a3 3 0 100-6 3 3 0 000 6zm14 0a3 3 0 100-6 3 3 0 000 6zM9 14l3-6h3l2 4M5 14h4"/>
+                            </svg>
+                            <span>Moto</span>
+                            <small>Meia tarifa</small>
+                        </div>
+                        <div class="vehicle-option" data-vehicle="caminhao">
+                            <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 7h11v10H3V7zm11 3h4l3 3v4h-7v-7zM6 20a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm12 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
+                            </svg>
+                            <span>Caminhão</span>
+                            <small>Por eixo</small>
+                        </div>
+                        <div class="vehicle-option" data-vehicle="onibus">
+                            <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16v10H4V6zm0 10v2a1 1 0 001 1h1a1 1 0 001-1v-2m10 0v2a1 1 0 001 1h1a1 1 0 001-1v-2M4 10h16M7 13h.01M17 13h.01"/>
+                            </svg>
+                            <span>Ônibus</span>
+                            <small>Por eixo</small>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div class="result-card" id="result-card"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ COMO FUNCIONA ============ -->
+<section class="section" id="como-funciona">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-eyebrow">Passo a passo</span>
+            <h2 class="section-title">Como usar a calculadora</h2>
+            <p class="section-subtitle">Descubra o valor dos pedágios da sua viagem em três passos simples.</p>
+        </div>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Informe a rota</h3>
+                <p>Digite a cidade de origem e destino da sua viagem. Nossa base cobre as principais rotas do Brasil.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Selecione o veículo</h3>
+                <p>Escolha a categoria: carro, moto, caminhão ou ônibus. Os valores são ajustados automaticamente por categoria tarifária.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Veja o resultado</h3>
+                <p>Receba a lista de praças, valores individuais, distância e tempo estimado. Tudo gratuito e sem cadastro.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section class="section" style="background: var(--color-surface-alt);">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-eyebrow">Por que usar</span>
+            <h2 class="section-title">Tudo o que você precisa saber antes de pegar a estrada</h2>
+            <p class="section-subtitle">Uma ferramenta feita para motoristas que valorizam planejamento e transparência.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                </div>
+                <h3>Transparência total</h3>
+                <p>Mostramos cada praça de pedágio com valor individual, não apenas o total. Você sabe exatamente para onde vai seu dinheiro.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                </div>
+                <h3>Cálculo instantâneo</h3>
+                <p>Resultados em segundos, sem precisar criar conta, baixar aplicativo ou informar dados pessoais. Basta origem e destino.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                    </svg>
+                </div>
+                <h3>Dados confiáveis</h3>
+                <p>Nossas informações são baseadas em fontes públicas oficiais como ANTT, Artesp e concessionárias das rodovias federais e estaduais.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                    </svg>
+                </div>
+                <h3>Combustível estimado</h3>
+                <p>Além dos pedágios, calculamos o custo estimado de combustível da viagem com base no consumo médio do veículo selecionado.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                    </svg>
+                </div>
+                <h3>Sem coleta de dados</h3>
+                <p>Não pedimos cadastro, e-mail ou telefone. Sua privacidade é respeitada conforme a Lei Geral de Proteção de Dados (LGPD).</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.24 17 12c.264 1.977.333 3.923.657 4.657z"/>
+                    </svg>
+                </div>
+                <h3>Atualização contínua</h3>
+                <p>Nosso banco de dados é atualizado conforme reajustes publicados nos diários oficiais das agências reguladoras do transporte.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ INFO SECTION ============ -->
+<section class="section info-section">
+    <div class="container">
+        <div class="info-grid">
+            <div class="info-image">
+                <img src="assets/img/pedagio-tags.png" alt="Pedágio com cabines de pagamento por aproximação no Brasil">
+            </div>
+            <div class="info-content">
+                <span class="section-eyebrow">Formas de pagamento</span>
+                <h2>Conheça as opções de pagamento em pedágios</h2>
+                <p>No Brasil, as rodovias oferecem diversas formas de pagamento de pedágio — de dinheiro até sistemas de cobrança automática. Entender essas opções pode economizar tempo e evitar filas.</p>
+                <ul class="info-list">
+                    <li>
+                        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        <span><strong>Dinheiro e cartão:</strong> aceitos nas cabines manuais de pedágio.</span>
+                    </li>
+                    <li>
+                        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        <span><strong>Tag automática (TAG):</strong> passagem sem parar, cobrança via fatura mensal.</span>
+                    </li>
+                    <li>
+                        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        <span><strong>Pagamento por aproximação:</strong> cartões por contactless e carteiras digitais.</span>
+                    </li>
+                    <li>
+                        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        <span><strong>Pedágio free flow:</strong> sistema novo que dispensa totalmente as cabines.</span>
+                    </li>
+                </ul>
+                <a href="#calculadora" class="btn btn-primary">Calcular pedágios agora</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-eyebrow">Dúvidas frequentes</span>
+            <h2 class="section-title">Perguntas comuns sobre pedágios</h2>
+            <p class="section-subtitle">Tire suas dúvidas sobre como funcionam os pedágios no Brasil.</p>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question">
+                    Os valores exibidos são oficiais?
+                    <svg class="faq-icon" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Os valores apresentados são <strong>estimativas informativas</strong> baseadas em tabelas públicas das concessionárias e agências reguladoras. Como as tarifas podem sofrer reajustes periódicos, recomendamos sempre verificar o valor final vigente no site oficial da concessionária da rodovia ou na <a href="https://www.gov.br/antt/" target="_blank" rel="noopener nofollow">ANTT</a>.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Por que motos pagam menos nos pedágios?
+                    <svg class="faq-icon" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Motos geralmente pagam metade do valor do carro de passeio (categoria 1) na maioria das concessionárias, conforme regulamentação da ANTT. Isso se deve ao menor impacto das motos no pavimento e ao porte reduzido do veículo.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Caminhões pagam por eixo?
+                    <svg class="faq-icon" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Sim. Veículos comerciais de carga e passageiros pagam pedágio com base no número de eixos. Nossa calculadora usa como referência um caminhão de 2 eixos. Para veículos com mais eixos, multiplique o valor proporcionalmente ou consulte a concessionária.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Existe desconto para usuários frequentes?
+                    <svg class="faq-icon" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Sim, algumas concessionárias oferecem o <strong>Desconto de Usuário Frequente (DUF)</strong>, que concede abatimento progressivo conforme o número de passagens no mesmo mês. É necessário cadastro em uma tag automática para ter direito ao benefício. Consulte a concessionária da sua rota.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Este site vende tags ou produtos?
+                    <svg class="faq-icon" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Não. O <strong>Calcular Flow Brasil</strong> é um serviço 100% gratuito e informativo. Não vendemos tags de pedágio, não realizamos transações financeiras e não coletamos dados pessoais dos usuários. Para contratar uma tag, procure diretamente empresas autorizadas pela ANTT.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Como funciona o pedágio free flow?
+                    <svg class="faq-icon" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        O pedágio free flow é um sistema de cobrança eletrônica sem cabines e sem necessidade de redução de velocidade. Pórticos com câmeras identificam a placa ou a tag do veículo e cobram o pedágio automaticamente. Já está implantado em algumas rodovias brasileiras.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="section cta-section">
+    <div class="container">
+        <h2>Pronto para planejar sua próxima viagem?</h2>
+        <p>Calcule agora o valor total dos pedágios e viaje com tranquilidade. Totalmente gratuito, sem cadastro.</p>
+        <a href="#calculadora" class="btn btn-primary btn-lg">
+            Usar calculadora gratuita
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+            </svg>
+        </a>
+    </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+    <div class="container">
+
+        <div class="footer-disclaimer">
+            <strong>AVISO LEGAL:</strong> O Calcular Flow Brasil é um serviço informativo gratuito. Não somos concessionária, não vendemos tags de pedágio, não cobramos taxas e não representamos órgãos públicos. Os valores exibidos são estimativas e podem não refletir o valor oficial vigente. Sempre consulte a concessionária da rodovia ou a ANTT para valores atualizados.
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-icon">
+                        <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+                        </svg>
+                    </span>
+                    Calcular Flow Brasil
+                </div>
+                <p>Calculadora gratuita e informativa de pedágios e rotas nas principais rodovias do Brasil.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#calculadora">Calculadora</a></li>
+                    <li><a href="index.html#como-funciona">Como funciona</a></li>
+                    <li><a href="pages/sobre.html">Sobre nós</a></li>
+                    <li><a href="pages/contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="pages/termos.html">Termos de Uso</a></li>
+                    <li><a href="pages/privacidade.html">Política de Privacidade</a></li>
+                    <li><a href="pages/cookies.html">Política de Cookies</a></li>
+                    <li><a href="pages/lgpd.html">LGPD</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contato</h4>
+                <div class="footer-contact-item">
+                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                    <span>daniel@imobiliariasillos.com.br</span>
+                </div>
+                <div class="footer-contact-item">
+                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                    <span>São Paulo - SP, Brasil</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                <strong style="color: #CBD5E1;">SYLUS IMOBILIARIA LTDA</strong><br>
+                <span style="color: #94A3B8;">(Calcular Flow Brasil)</span><br>
+                CNPJ: <span id="cnpj-display">17.644.769/0001-45</span> &middot; © 2026 Todos os direitos reservados.
+            </div>
+            <div class="footer-legal">
+                <a href="pages/termos.html">Termos</a>
+                <a href="pages/privacidade.html">Privacidade</a>
+                <a href="pages/cookies.html">Cookies</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ============ MODAL TERMOS ============ -->
+<div class="terms-modal" id="terms-modal">
+    <div class="terms-modal-content">
+        <div class="terms-modal-header">
+            <h2>Bem-vindo ao Calcular Flow Brasil</h2>
+        </div>
+        <div class="terms-modal-body">
+            <h4>Antes de continuar, leia com atenção:</h4>
+            <p><strong>1. Serviço Informativo Gratuito:</strong> Este site oferece uma calculadora gratuita de pedágios com caráter puramente <strong>informativo e educacional</strong>. Os valores apresentados são estimativas baseadas em dados públicos.</p>
+            <p><strong>2. Não Somos Concessionária:</strong> Não vendemos tags, não cobramos taxas, não processamos pagamentos de pedágios e não representamos órgãos públicos ou concessionárias de rodovias.</p>
+            <p><strong>3. Valores Aproximados:</strong> As tarifas de pedágio podem sofrer reajustes periódicos. Sempre confirme o valor oficial vigente com a concessionária responsável antes da viagem.</p>
+            <p><strong>4. Privacidade:</strong> Respeitamos sua privacidade conforme a Lei Geral de Proteção de Dados (LGPD). Não coletamos dados pessoais na calculadora.</p>
+            <p><strong>5. Cookies:</strong> Utilizamos cookies técnicos para lembrar suas preferências e cookies analíticos para melhorar o serviço.</p>
+        </div>
+        <label class="terms-checkbox" for="terms-checkbox">
+            <input type="checkbox" id="terms-checkbox">
+            <span>Li e aceito os <a href="pages/termos.html" target="_blank">Termos de Uso</a> e a <a href="pages/privacidade.html" target="_blank">Política de Privacidade</a> do Calcular Flow Brasil.</span>
+        </label>
+        <div class="terms-modal-footer">
+            <button class="btn btn-secondary" id="terms-reject-btn">Não aceito</button>
+            <button class="btn btn-primary" id="terms-accept-btn" disabled>Aceitar e continuar</button>
+        </div>
+    </div>
+</div>
+
+<!-- ============ COOKIE BANNER ============ -->
+<div class="cookie-banner" id="cookie-banner">
+    <h4>
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="var(--color-primary)" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+        </svg>
+        Cookies
+    </h4>
+    <p>Utilizamos cookies para melhorar sua experiência neste site. Leia nossa <a href="pages/cookies.html">Política de Cookies</a> para saber mais.</p>
+    <div class="cookie-actions">
+        <button class="btn btn-secondary" id="cookie-reject">Apenas essenciais</button>
+        <button class="btn btn-primary" id="cookie-accept">Aceitar todos</button>
+    </div>
+</div>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
